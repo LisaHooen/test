@@ -1,0 +1,13 @@
+* {
+  margin: unset;
+}
+
+dialog {
+  margin: revert;
+}
+
+#root {
+  display: grid;
+  height: 100dvh;
+  grid-template-rows: auto auto 1fr;
+}

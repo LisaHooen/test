@@ -3,6 +3,8 @@ import { Map, View } from "ol";
 import TileLayer from "ol/layer/Tile";
 import { OSM } from "ol/source";
 import { useGeographic } from "ol/proj";
+import "./application.css";
+import "ol/ol.css";
 
 // By calling the "useGeographic" function in OpenLayers, we tell that we want coordinates to be in degrees
 //  instead of meters, which is the default. Without this `center: [11, 60]` doesn't work on the view
@@ -18,7 +20,7 @@ const map = new Map({
 });
 
 // A functional React component
-export function Application() {
+export function MapApplication() {
   // `useRef` bridges the gap between JavaScript functions that expect DOM objects and React components
   // `as MutableRefObject` is required by TypeScript to avoid us binding the wrong ref to the wrong component
   const mapRef = useRef() as MutableRefObject<HTMLDivElement>;
