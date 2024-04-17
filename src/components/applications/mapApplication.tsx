@@ -32,5 +32,5 @@ export function MapApplication() {
   }, []);
 
   // This is the location (in React) where we want the map to be displayed
-  return <div ref={mapRef}></div>;
+  return <div className="map" ref={mapRef}></div>;
 }
