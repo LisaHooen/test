@@ -15,11 +15,31 @@ const map = new Map({
 });
 
 export function MapApplication() {
+  function handleFocusUser(e: React.MouseEvent) {
+    e.preventDefault();
+    navigator.geolocation.getCurrentPosition((pos) => {
+      const { latitude, longitude } = pos.coords;
+      map.getView().animate({
+        center: [longitude, latitude],
+        zoom: 10,
+      });
+    });
+  }
   const mapRef = useRef() as MutableRefObject<HTMLDivElement>;
 
   useEffect(() => {
     map.setTarget(mapRef.current);
   }, []);
 
-  return <div className="map" ref={mapRef}></div>;
+  return (
+    <>
+      <header>Test kart</header>
+      <nav>
+        <a href={"#"} onClick={handleFocusUser}>
+          Focus on me
+        </a>
+      </nav>
+      <div ref={mapRef}></div>
+    </>
+  );
 }
