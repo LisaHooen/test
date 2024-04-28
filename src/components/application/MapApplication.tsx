@@ -3,7 +3,7 @@ import { Map, View } from "ol";
 import TileLayer from "ol/layer/Tile";
 import { OSM } from "ol/source";
 import { useGeographic } from "ol/proj";
-import "./application.css";
+import "./Application.css";
 import "ol/ol.css";
 
 useGeographic();
