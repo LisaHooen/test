@@ -4,6 +4,7 @@ import { OSM } from "ol/source";
 import React, { MutableRefObject, useEffect, useRef } from "react";
 import { useGeographic } from "ol/proj";
 import "ol/ol.css";
+import "./Application.css";
 
 useGeographic();
 
